@@ -1,6 +1,6 @@
-'use client'
+'use client'; 
 import { ReactElement } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaHeadset, FaLeaf, FaTruck } from "react-icons/fa6";
@@ -13,7 +13,7 @@ export function Escolhas() {
     controls.start("visible");
   }
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +23,7 @@ export function Escolhas() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
@@ -79,7 +79,7 @@ interface CardEscolhaProps {
   title: string;
   icon: ReactElement;
   text: string;
-  variants: any;
+  variants: Variants; 
 }
 
 function CardEscolha({ title, icon, text, variants }: CardEscolhaProps) {
