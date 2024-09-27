@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "./components/Header";
 import { Raleway } from 'next/font/google';
 import { Footer } from "./components/Footer";
+import { WhatsAppButton } from "./components/WhatsAppButton";
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -24,11 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${raleway.variable} antialiased`}
+        className={`${raleway.variable} antialiased relative`}
       >
         <Header />
         {children}
         <Footer/>
+        <WhatsAppButton/>
       </body>
     </html>
   );
