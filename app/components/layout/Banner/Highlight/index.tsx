@@ -16,7 +16,7 @@ export function HighlightSection() {
               alt="Ícone de bateria"
             />
             <p className="font-semibold text-lg whitespace-nowrap">
-              Sua bateria em Cabo Frio em 50 minutos!
+              Sua bateria em 50 minutos!
             </p>
           </div>
         ))}
