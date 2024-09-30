@@ -21,7 +21,7 @@ export function Banner() {
 
   return (
     <>
-      <section className="relative items-center flex h-[700px] md:h-[600px] overflow-hidden">
+      <section className="relative items-center flex h-[800px] md:h-[600px] overflow-hidden">
         <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]" />
         <div className="container relative z-30 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-3 items-center">
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>

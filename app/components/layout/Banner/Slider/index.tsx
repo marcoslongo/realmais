@@ -16,7 +16,7 @@ export function Slider() {
         disableOnInteraction: false,
       }}
       modules={[ Autoplay]}
-      className={styles.swiperContainer}
+      className='relative w-full h-[280px] md:h-[400px]'
     >
       <SwiperSlide className={styles.slide}>
         <Image
