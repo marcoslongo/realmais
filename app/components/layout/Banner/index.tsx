@@ -5,6 +5,7 @@ import { Video } from "./Video";
 import { HighlightSection } from "./Highlight";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
+import Slider from "./Slider";
 
 export function Banner() {
   const textFromLeft = {
@@ -49,12 +50,7 @@ export function Banner() {
             </motion.div>
           </motion.div>
           <motion.div {...imageFromRight}>
-            <Image
-              width={700}
-              height={400}
-              alt=""
-              src={'/assets/images/banner-image.png'}
-            />
+            <Slider />
           </motion.div>
         </div>
         <Video />
