@@ -13,11 +13,10 @@ const config: Config = {
         sans: ['var(--font-lato)'],
       },
       container: {
-        center: true, // Corrigido para ser booleano
+        center: true,
+        padding: "2rem",
         screens: {
-          mobile: '768px',
-          tablet: '992px',
-          desktop: '1248px',
+          "2xl": "1400px",
         },
       },
       colors: {

@@ -30,10 +30,10 @@ export function Contato() {
       ref={ref}
       className="relative h-[600px] overflow-hidden flex flex-col justify-center scroll-mt-8"
     >
-      <div className="absolute w-full h-full top-0 z-20 opacity-70 block bg-[#000056]"></div>
+      <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]"></div>
       
       <motion.div
-        className="container text-center relative z-30 mb-8 w-1/2 flex flex-col gap-4"
+        className="container text-center relative z-30 mb-8 w-full md:w-1/2 flex flex-col gap-4"
         variants={titleVariants}
         initial="hidden"
         animate={controls}
@@ -51,7 +51,7 @@ export function Contato() {
         initial="hidden"
         animate={controls}
       >
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <form className="flex flex-col gap-3">
             <div className="grid grid-cols-2 gap-3">
               <Input type="text" placeholder="Nome" />
