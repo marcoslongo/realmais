@@ -13,7 +13,7 @@ export function MenuMobile() {
   return (
     <Sheet>
       <SheetTrigger className="flex md:hidden" asChild>
-        <Button variant="outline"><RiMenu3Line /></Button>
+        <Button className="logo-color-blue border-none pr-0" variant="outline"><RiMenu3Line size={30} /></Button>
       </SheetTrigger>
       <SheetContent>
         <div className="grid gap-4 py-4">
@@ -38,8 +38,8 @@ interface ItemMenuProps {
   children: React.ReactNode;
 }
 
-function ItemMenu({href, children}:ItemMenuProps){
-  return(
+function ItemMenu({ href, children }: ItemMenuProps) {
+  return (
     <li><Link className="text-lg font-semibold hover:logo-color-orange transition" href={href}>{children}</Link></li>
   );
 }
