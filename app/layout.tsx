@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body
-        className={`${raleway.variable} antialiased relative`}
+        className={`${raleway.variable} antialiased relative overflow-x-hidden`}
       >
         <Header />
         {children}

@@ -9,21 +9,19 @@ import { useInView } from "react-intersection-observer";
 export function Sobre() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  // Variantes invertidas para animação
   const textFromRight = {
-    initial: { opacity: 0, x: 100 }, // Texto vem da direita
+    initial: { opacity: 0, x: 100 },
     animate: { opacity: 1, x: 0 }
   };
 
   const imageFromLeft = {
-    initial: { opacity: 0, x: -100 }, // Imagem vem da esquerda
+    initial: { opacity: 0, x: -100 },
     animate: { opacity: 1, x: 0 }
   };
 
   return (
     <section id="sobre" className="scroll-mt-16">
-      <div ref={ref} className="container grid grid-cols-2 items-center my-20 gap-8">
-        {/* Imagem vindo da esquerda */}
+      <div ref={ref} className="container grid grid-cols-1 md:grid-cols-2 items-center my-20 gap-8">
         <motion.div
           className="relative h-full shadow-lg"
           variants={imageFromLeft}
@@ -40,7 +38,6 @@ export function Sobre() {
           />
         </motion.div>
 
-        {/* Texto vindo da direita */}
         <motion.div
           className="flex flex-col logo-color-blue gap-3"
           variants={textFromRight}

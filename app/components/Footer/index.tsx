@@ -7,7 +7,7 @@ import { MdOutlineContactSupport, MdOutlineMailOutline, MdOutlinePhone } from "r
 export function Footer() {
   return (
     <footer className="bg-[#000056] py-14 border-t-4 border-[#ff6600]">
-      <div className="container grid grid-cols-3">
+      <div className="container grid grid-cols-1 justify-center md:justify-start md:grid-cols-3">
         <div>
           <Link href={''}>
             <Image

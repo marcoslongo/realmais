@@ -23,7 +23,7 @@ export function Banner() {
     <>
       <section className="relative items-center flex h-[600px] overflow-hidden">
         <div className="absolute w-full h-full top-0 z-20 opacity-70 block bg-[#000056]" />
-        <div className="container relative z-30 grid grid-cols-2 gap-3 items-center">
+        <div className="container relative z-30 grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>
             <div>
               <h1 className="font-bold text-5xl text-white">

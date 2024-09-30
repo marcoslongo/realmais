@@ -32,7 +32,7 @@ export function Escolhas() {
     <section className="py-11">
       <h2 className="text-5xl text-center font-bold logo-color-blue">Por que nos escolher?</h2>
       <motion.div
-        className="container grid grid-cols-4 gap-6 mt-12"
+        className="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
         ref={ref} 
         variants={containerVariants}
         initial="hidden"
