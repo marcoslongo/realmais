@@ -5,7 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import styles from './carousel.module.css'; 
 
-export default () => {
+export function Slider() {
   return (
     <Swiper
       spaceBetween={0}

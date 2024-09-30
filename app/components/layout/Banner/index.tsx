@@ -4,7 +4,7 @@ import { Video } from "./Video";
 import { HighlightSection } from "./Highlight";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
-import Slider from "./Slider";
+import { Slider } from "./Slider";
 
 export function Banner() {
   const textFromLeft = {
