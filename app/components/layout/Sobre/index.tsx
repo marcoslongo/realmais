@@ -20,7 +20,7 @@ export function Sobre() {
   };
 
   return (
-    <section id="sobre" className="scroll-mt-16">
+    <section id="sobre" className="scroll-mt-64">
       <div ref={ref} className="container grid grid-cols-1 md:grid-cols-2 items-center my-20 gap-8">
         <motion.div
           className="relative h-full shadow-lg"

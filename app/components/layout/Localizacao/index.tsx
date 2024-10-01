@@ -22,7 +22,7 @@ export function Localizacao() {
   };
 
   return (
-    <section id="localizacao" className="py-12 scroll-mt-8">
+    <section id="localizacao" className="py-12 scroll-mt-64">
       <div ref={ref} className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <motion.div
           className="flex flex-col justify-center items-center"

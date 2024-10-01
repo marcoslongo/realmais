@@ -28,7 +28,7 @@ export function Contato() {
     <section
       id="contato"
       ref={ref}
-      className="relative h-[600px] overflow-hidden flex flex-col justify-center scroll-mt-8"
+      className="relative h-[600px] overflow-hidden flex flex-col justify-center scroll-mt-64"
     >
       <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]"></div>
       
