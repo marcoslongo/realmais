@@ -39,7 +39,7 @@ export function Header() {
       </div>
       <div className="container flex justify-between items-center py-4">
         <Link href="">
-          <Image src="assets/images/RealMais.svg" width={170} height={80} alt="Rede Real+" />
+          <Image src="assets/images/realmais.svg" width={170} height={80} alt="Rede Real+" />
         </Link>
         <MenuDesktop />
         <MenuMobile />
