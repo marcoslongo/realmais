@@ -40,7 +40,7 @@ export function Contato() {
       >
         <h2 className="text-5xl text-white font-bold">Contato</h2>
         <p className="text-white">
-          Não fique na mão! Ligue agora para a Rede Real Mais e tenha o melhor
+          Não fique na mão! Ligue agora para a Rede RealMais e tenha o melhor
           serviço e atendimento.
         </p>
       </motion.div>

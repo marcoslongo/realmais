@@ -27,7 +27,7 @@ export function Banner() {
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>
             <div>
               <h1 className="font-bold text-3xl md:text-5xl text-center md:text-start text-white">
-                Bem-vindo à <span className="logo-color-orange">Rede Baterias Real Mais</span>
+                Bem-vindo à <span className="logo-color-orange">Rede Baterias RealMais</span>
                 <br />
                 <span className="text-xl">Seu Especialista em Baterias Automotivas em Cabo Frio!</span>
               </h1>

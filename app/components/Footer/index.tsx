@@ -17,7 +17,7 @@ export function Footer() {
               alt=""
             />
           </Link>
-          <p className="text-white">© Rede Real Mais <br /> 2024 Todos os Direitos Reservados</p>
+          <p className="text-white">© Rede RealMais <br /> 2024 Todos os Direitos Reservados</p>
         </div>
         <div className="flex flex-col gap-3 text-white font-bold">
           <div className="text-2xl flex items-center gap-2">
@@ -35,9 +35,9 @@ export function Footer() {
             <h2>Contatos</h2>
           </div>
           <div className="flex flex-col gap-2">
-            <Link className="flex gap-2 hover:underline" href={'mailto:rederealmais@bateriasreal.com.br'}>
+            <Link className="flex gap-2 hover:underline" href={'mailto:redeRealMais@bateriasreal.com.br'}>
               <MdOutlineMailOutline size={26}/>
-              rederealmais@bateriasreal.com.br
+              redeRealMais@bateriasreal.com.br
             </Link>
             <Link className="flex gap-2 hover:underline" href={'tel:+5511966033023'}>
               <MdOutlinePhone size={26} />
