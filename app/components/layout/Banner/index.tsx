@@ -33,10 +33,11 @@ export function Banner() {
               </h1>
             </div>
             <div>
-              <p className="md:text-lg text-white text-center md:text-start">
-                Oferecemos as melhores soluções em baterias automotivas para você. <br />
-                Oferecemos uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.
-              </p>
+              <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
+                <p>Oferecemos as melhores soluções em baterias automotivas para você.</p>
+                <p>Marca com 45 anos anos de mercado, contamos com uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
+                <span className="font-bold text-2xl logo-color-orange">Baterias direto da fábrica</span>
+              </div>
             </div>
             <motion.div className="flex justify-center md:justify-start" whileHover={{ scale: 1.05 }}>
               <Link
