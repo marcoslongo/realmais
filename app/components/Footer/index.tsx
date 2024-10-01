@@ -2,12 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaRegClock } from "react-icons/fa";
 import { MdOutlineContactSupport, MdOutlineMailOutline, MdOutlinePhone } from "react-icons/md";
+import { RiUserFollowFill } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
+
+
 
 
 export function Footer() {
   return (
     <footer className="bg-[#000056] py-14 border-t-4 border-[#ff6600]">
-      <div className="container grid grid-cols-1 justify-center gap-8 md:gap-0 md:justify-start md:grid-cols-3">
+      <div className="container grid grid-cols-1 justify-center gap-8 md:gap-0 md:justify-start md:grid-cols-4">
         <div>
           <Link href={''}>
             <Image
@@ -42,6 +46,18 @@ export function Footer() {
             <Link className="flex gap-2 hover:underline" href={'tel:+5511966033023'}>
               <MdOutlinePhone size={26} />
               (11) 96603-3023
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 text-white font-bold">
+          <div className="text-2xl flex items-center gap-2">
+            <RiUserFollowFill size={26} />
+            <h2>Siga-nos</h2>
+          </div>
+          <div className="flex flex-col gap-2">
+            <Link className="flex gap-2 hover:underline" href={'https://www.instagram.com/redebateriasreal?igsh=NmNlYXYyNTNpNmNz'}>
+              <FaInstagram size={26}/>
+              @redebateriasreal
             </Link>
           </div>
         </div>
