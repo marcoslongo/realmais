@@ -35,7 +35,8 @@ export function MenuMobile() {
             </ul>
             <Link
               className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md"
-              href=""
+              href={'https://wa.me/+5522998399111'}
+              target="_blank"
             >
               <FaWhatsapp size={28} />
               Peça sua Bateria

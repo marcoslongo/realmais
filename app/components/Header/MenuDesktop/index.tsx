@@ -9,7 +9,11 @@ export function MenuDesktop() {
         <ItemMenu href={'#localizacao'}>Localização</ItemMenu>
         <ItemMenu href={'#contato'}>Contato</ItemMenu>
       </ul>
-      <Link className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md" href={''}>
+      <Link
+        className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md"
+        href={'https://wa.me/+5522998399111'}
+        target="_blank"
+      >
         <FaWhatsapp size={28} />
         Peça sua Bateria
       </Link>
@@ -22,8 +26,8 @@ interface ItemMenuProps {
   children: React.ReactNode;
 }
 
-function ItemMenu({href, children}:ItemMenuProps){
-  return(
+function ItemMenu({ href, children }: ItemMenuProps) {
+  return (
     <li><Link className="text-lg font-semibold hover:logo-color-orange transition" href={href}>{children}</Link></li>
   );
 }
