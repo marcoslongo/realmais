@@ -29,8 +29,8 @@ export function Header() {
     <header className={`border-b border-[#ccc] w-full z-50 bg-white transition-all ${isScrolled ? 'fixed' : 'relative'}`}>
       <div className="logo-bg-orange">
         <div className={`container flex-col gap-2 md:gap-0 md:flex-row justify-between md:items-center py-3 text-white font-semibold md:text-lg ${isScrolled ? 'hidden' : 'flex'}`}>
-          <Link href="mailto:redeRealMais@bateriasreal.com.br" className="flex items-center gap-2 hover:underline">
-            <MdOutlineMailOutline size={26} /> redeRealMais@bateriasreal.com.br
+          <Link href="mailto:rederealmais@bateriasreal.com.br" className="flex items-center gap-2 hover:underline">
+            <MdOutlineMailOutline size={26} /> rederealmais@bateriasreal.com.br
           </Link>
           <Link href="" className="flex items-center gap-2 hover:underline">
             <MdOutlinePhone size={26} /> (11) 96603-3023
