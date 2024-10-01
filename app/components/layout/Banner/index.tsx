@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Video } from "./Video";
 import { HighlightSection } from "./Highlight";
@@ -7,6 +8,27 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { Slider } from "./Slider";
 
 export function Banner() {
+  const [yearsInMarket, setYearsInMarket] = useState(45);
+
+  useEffect(() => {
+    const updateYears = () => {
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+
+      if (currentDate.getMonth() === 1) { 
+        setYearsInMarket(currentYear - 1978); 
+      }
+    };
+
+    updateYears();
+
+    const intervalId = setInterval(() => {
+      updateYears();
+    }, 1000 * 60 * 60 * 24); 
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   const textFromLeft = {
     initial: { opacity: 0, x: -100 },
     animate: { opacity: 1, x: 0 },
@@ -35,7 +57,7 @@ export function Banner() {
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
                 <p>Oferecemos as melhores soluções em baterias automotivas para você.</p>
-                <p>Marca com 45 anos anos de mercado, contamos com uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
+                <p>Marca com {yearsInMarket} anos de mercado, contamos com uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
                 <span className="font-bold text-lg md:text-2xl logo-color-orange">Baterias direto da fábrica</span>
               </div>
             </div>
