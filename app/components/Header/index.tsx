@@ -32,7 +32,7 @@ export function Header() {
           <Link href="mailto:rederealmais@bateriasreal.com.br" className="flex items-center gap-2 hover:underline">
             <MdOutlineMailOutline size={26} /> rederealmais@bateriasreal.com.br
           </Link>
-          <Link href={'tel:11966033023'} className="flex items-center gap-2 hover:underline">
+          <Link href={'tel:+5511966033023'} className="flex items-center gap-2 hover:underline">
             <MdOutlinePhone size={26} /> (11) 96603-3023
           </Link>
         </div>
