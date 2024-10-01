@@ -11,7 +11,7 @@ import { FaInstagram } from "react-icons/fa";
 export function Footer() {
   return (
     <footer className="bg-[#000056] py-14 border-t-4 border-[#ff6600]">
-      <div className="container grid grid-cols-1 justify-center gap-8 md:gap-0 md:justify-start md:grid-cols-4">
+      <div className="container grid grid-cols-1 justify-center gap-8 md:gap-4 md:justify-start md:grid-cols-4">
         <div>
           <Link href={''}>
             <Image
