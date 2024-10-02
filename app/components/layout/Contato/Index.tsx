@@ -1,10 +1,8 @@
 'use client'
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Video } from "../Banner/Video";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Form } from "./Form";
 
 export function Contato() {
   const controls = useAnimation();
@@ -31,7 +29,7 @@ export function Contato() {
       className="relative h-[600px] overflow-hidden flex flex-col justify-center scroll-mt-64"
     >
       <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]"></div>
-      
+
       <motion.div
         className="container text-center relative z-30 mb-8 w-full md:w-1/2 flex flex-col gap-4"
         variants={titleVariants}
@@ -44,7 +42,7 @@ export function Contato() {
           serviço e atendimento.
         </p>
       </motion.div>
-      
+
       <motion.div
         className="container relative z-30 flex items-center justify-center"
         variants={formVariants}
@@ -52,18 +50,7 @@ export function Contato() {
         animate={controls}
       >
         <div className="w-full md:w-1/2">
-          <form className="flex flex-col gap-3">
-            <div className="grid grid-cols-2 gap-3">
-              <Input type="text" placeholder="Nome" />
-              <Input type="text" placeholder="Sobrenome" />
-            </div>
-            <Input type="text" placeholder="Telefone" />
-            <Input type="email" placeholder="E-mail" />
-            <Textarea placeholder="Mensagem" />
-            <Button className="bg-[#ff6600] hover:bg-[#000056] uppercase font-semibold text-lg">
-              Enviar
-            </Button>
-          </form>
+          <Form />
         </div>
       </motion.div>
 

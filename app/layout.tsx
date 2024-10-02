@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Raleway } from 'next/font/google';
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import { Toaster } from "@/components/ui/toaster";
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         <WhatsAppButton/>
+        <Toaster />
       </body>
     </html>
   );
