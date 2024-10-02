@@ -57,7 +57,7 @@ export function Banner() {
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
                 <p>Oferecemos as melhores soluções em baterias automotivas para você.</p>
-                <p>Marca com {yearsInMarket} anos de mercado, contamos com uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
+                <p>Marca com {yearsInMarket} anos de mercado, que oferece linha completa completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
                 <span className="font-bold text-lg md:text-2xl logo-color-orange">Baterias direto da fábrica</span>
               </div>
             </div>
