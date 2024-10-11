@@ -5,6 +5,7 @@ import { Raleway } from 'next/font/google';
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { Toaster } from "@/components/ui/toaster";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <GoogleTagManager gtmId="GTM-PQ6HG94V"/>
       <body
         className={`${raleway.variable} antialiased relative overflow-x-hidden`}
       >
