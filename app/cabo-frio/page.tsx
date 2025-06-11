@@ -17,7 +17,12 @@ export default function Home() {
         email={siteData.Header.email}
         whatsapp={siteData.Header.whatsapp}
       />
-      <Banner />
+      <Banner
+        titulo={siteData.Banner.titulo}
+        subtitulo={siteData.Banner.subtitulo}
+        texto={siteData.Banner.texto}
+        informativo={siteData.Banner.informativo}
+      />
       <Sobre />
       <Escolhas />
       <Localizacao />

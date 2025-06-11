@@ -7,7 +7,14 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Slider } from "./Slider";
 
-export function Banner() {
+interface BannerProps {
+  titulo: string,
+  subtitulo: string,
+  texto: string,
+  informativo: string
+}
+
+export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
   const [yearsInMarket, setYearsInMarket] = useState(45);
 
   useEffect(() => {
@@ -15,8 +22,8 @@ export function Banner() {
       const currentDate = new Date();
       const currentYear = currentDate.getFullYear();
 
-      if (currentDate.getMonth() === 1) { 
-        setYearsInMarket(currentYear - 1978); 
+      if (currentDate.getMonth() === 1) {
+        setYearsInMarket(currentYear - 1978);
       }
     };
 
@@ -24,7 +31,7 @@ export function Banner() {
 
     const intervalId = setInterval(() => {
       updateYears();
-    }, 1000 * 60 * 60 * 24); 
+    }, 1000 * 60 * 60 * 24);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -49,16 +56,15 @@ export function Banner() {
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>
             <div>
               <h1 className="font-bold text-3xl md:text-5xl text-center md:text-start text-white">
-                Bem-vindo à <span className="logo-color-orange">Rede Baterias RealMais</span>
+                {titulo}
                 <br />
-                <span className="text-xl">Seu Especialista em Baterias Automotivas em Cabo Frio!</span>
+                <span className="text-xl">{subtitulo}</span>
               </h1>
             </div>
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
-                <p>Oferecemos as melhores soluções em baterias automotivas para você.</p>
-                <p>Marca com {yearsInMarket} anos de mercado, que oferece linha completa completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
-                <span className="font-bold text-lg md:text-2xl logo-color-orange">Baterias direto da fábrica</span>
+                {texto}
+                <span className="font-bold text-lg md:text-2xl logo-color-orange">{informativo}</span>
               </div>
             </div>
             <motion.div className="flex justify-center md:justify-start" whileHover={{ scale: 1.05 }}>
