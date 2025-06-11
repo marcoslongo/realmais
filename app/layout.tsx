@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "./components/Header";
+"use client";
+
+import "../app/globals.css";
+import { usePathname } from "next/navigation";
 import { Raleway } from 'next/font/google';
-import { Footer } from "./components/Footer";
-import { WhatsAppButton } from "./components/WhatsAppButton";
 import { Toaster } from "@/components/ui/toaster";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -14,26 +16,23 @@ const raleway = Raleway({
   variable: '--font-raleway'
 });
 
-export const metadata: Metadata = {
-  title: "Rede RealMais",
-  description: "Oferecemos uma linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.",
-};
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  const isHome = pathname === "/";
+
   return (
-    <html lang="en" className="scroll-smooth overflow-x-hidden">
-      <GoogleTagManager gtmId="GTM-PQ6HG94V"/>
-      <body
-        className={`${raleway.variable} antialiased relative overflow-x-hidden`}
-      >
-        <Header />
+    <html lang="pt-BR" className="scroll-smooth overflow-x-hidden">
+      <GoogleTagManager gtmId="GTM-PQ6HG94V" />
+      <body className={`${raleway.variable} antialiased relative overflow-x-hidden`}>
+        {!isHome && <Header />}
         {children}
-        <Footer/>
-        <WhatsAppButton/>
+        {!isHome && (
+          <>
+            <Footer />
+            <WhatsAppButton />
+          </>
+        )}
         <Toaster />
       </body>
     </html>
