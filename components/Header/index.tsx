@@ -6,7 +6,13 @@ import { MdOutlineMailOutline, MdOutlinePhone } from "react-icons/md";
 import { MenuDesktop } from "./MenuDesktop";
 import { MenuMobile } from "./MenuMobile";
 
-export function Header() {
+interface HeaderProps {
+  telefone: string;
+  email: string;
+  whatsapp: string;
+}
+
+export function Header({ telefone, email, whatsapp }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,10 +36,10 @@ export function Header() {
       <div className="logo-bg-orange">
         <div className={`container flex-col gap-2 md:gap-0 md:flex-row justify-between md:items-center py-3 text-white font-semibold md:text-lg ${isScrolled ? 'hidden' : 'flex'}`}>
           <Link href="mailto:rederealmais@bateriasreal.com.br" className="flex items-center gap-2 hover:underline">
-            <MdOutlineMailOutline size={26} /> rederealmais@bateriasreal.com.br
+            <MdOutlineMailOutline size={26} /> {email}
           </Link>
           <Link href={'tel:+5522998399111'} className="flex items-center gap-2 hover:underline">
-            <MdOutlinePhone size={26} /> (22) 99839 9111
+            <MdOutlinePhone size={26} /> {telefone}
           </Link>
         </div>
       </div>
@@ -46,8 +52,12 @@ export function Header() {
             alt="Rede Real+"
           />
         </Link>
-        <MenuDesktop />
-        <MenuMobile />
+        <MenuDesktop
+          whatsapp={whatsapp}
+        />
+        <MenuMobile
+          whatsapp={whatsapp}
+        />
       </div>
     </header>
   );
