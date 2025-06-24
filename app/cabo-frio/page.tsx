@@ -23,9 +23,15 @@ export default function Home() {
         texto={siteData.Banner.texto}
         informativo={siteData.Banner.informativo}
       />
-      <Sobre />
+      <Sobre
+        texto={siteData.Sobre.texto}
+        whatsapp={siteData.Sobre.whatsapp}
+      />
       <Escolhas />
-      <Localizacao />
+      <Localizacao
+        endereco={siteData.Localizacao.endereco}
+        localMap={siteData.Localizacao.localMap}
+      />
       <Contato />
       <Footer />
     </>

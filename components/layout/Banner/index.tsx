@@ -51,19 +51,19 @@ export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
   return (
     <>
       <section className="relative items-center flex h-[800px] md:h-[600px] overflow-hidden">
-        <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]" />
+        <div className="absolute w-full h-full top-0 z-30 opacity-100 md:opacity-70 block bg-[#000056]" />
         <div className="container relative z-30 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-3 items-center">
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>
             <div>
               <h1 className="font-bold text-3xl md:text-5xl text-center md:text-start text-white">
-                {titulo}
+                <span dangerouslySetInnerHTML={{ __html: titulo }} />
                 <br />
                 <span className="text-xl">{subtitulo}</span>
               </h1>
             </div>
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
-                {texto}
+                <div dangerouslySetInnerHTML={{ __html: texto }} />
                 <span className="font-bold text-lg md:text-2xl logo-color-orange">{informativo}</span>
               </div>
             </div>
@@ -83,6 +83,7 @@ export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
           </motion.div>
         </div>
         <Video />
+        <div className="absolute w-full h-full top-0 z-10 block bg-[#000056]" />
       </section>
       <HighlightSection />
     </>
