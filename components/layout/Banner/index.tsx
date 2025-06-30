@@ -1,5 +1,5 @@
-'use client'
-import { useEffect, useState } from "react";
+'use client';
+
 import { motion } from "framer-motion";
 import { Video } from "./Video";
 import { HighlightSection } from "./Highlight";
@@ -7,27 +7,16 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Slider } from "./Slider";
 
-export function Banner() {
-  const [yearsInMarket, setYearsInMarket] = useState(45);
+interface BannerProps {
+  titulo: string;
+  subtitulo: string;
+  texto: string;
+  informativo: string;
+}
 
-  useEffect(() => {
-    const updateYears = () => {
-      const currentDate = new Date();
-      const currentYear = currentDate.getFullYear();
-
-      if (currentDate.getMonth() === 1) { 
-        setYearsInMarket(currentYear - 1978); 
-      }
-    };
-
-    updateYears();
-
-    const intervalId = setInterval(() => {
-      updateYears();
-    }, 1000 * 60 * 60 * 24); 
-
-    return () => clearInterval(intervalId);
-  }, []);
+export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
+  const currentYear = new Date().getFullYear();
+  const yearsInMarket = currentYear - 1978;
 
   const textFromLeft = {
     initial: { opacity: 0, x: -100 },
@@ -44,21 +33,25 @@ export function Banner() {
   return (
     <>
       <section className="relative items-center flex h-[800px] md:h-[600px] overflow-hidden">
-        <div className="absolute w-full h-full top-0 z-20 opacity-100 md:opacity-70 block bg-[#000056]" />
+        <div className="absolute w-full h-full top-0 z-30 opacity-100 md:opacity-70 block bg-[#000056]" />
         <div className="container relative z-30 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-3 items-center">
           <motion.div className="flex flex-col gap-5" {...textFromLeft}>
             <div>
               <h1 className="font-bold text-3xl md:text-5xl text-center md:text-start text-white">
-                Bem-vindo à <span className="logo-color-orange">Rede Baterias RealMais</span>
+                <span dangerouslySetInnerHTML={{ __html: titulo }} />
                 <br />
-                <span className="text-xl">Seu Especialista em Baterias Automotivas em Cabo Frio!</span>
+                <span className="text-xl">{subtitulo}</span>
               </h1>
             </div>
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
-                <p>Oferecemos as melhores soluções em baterias automotivas para você.</p>
-                <p>Marca com {yearsInMarket} anos de mercado, que oferece linha completa completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>
-                <span className="font-bold text-lg md:text-2xl logo-color-orange">Baterias direto da fábrica</span>
+                <div dangerouslySetInnerHTML={{ __html: texto }} />
+                <span className="font-bold text-lg md:text-2xl logo-color-orange">
+                  {informativo}
+                </span>
+                <span className="text-white text-base md:text-lg">
+                  {yearsInMarket} anos de mercado
+                </span>
               </div>
             </div>
             <motion.div className="flex justify-center md:justify-start" whileHover={{ scale: 1.05 }}>
@@ -77,6 +70,7 @@ export function Banner() {
           </motion.div>
         </div>
         <Video />
+        <div className="absolute w-full h-full top-0 z-10 block bg-[#000056]" />
       </section>
       <HighlightSection />
     </>

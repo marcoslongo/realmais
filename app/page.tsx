@@ -1,17 +1,21 @@
-import { Banner } from "./components/layout/Banner";
-import { Contato } from "./components/layout/Contato/Index";
-import { Escolhas } from "./components/layout/Escolhas";
-import { Localizacao } from "./components/layout/Localizacao";
-import { Sobre } from "./components/layout/Sobre";
+import { SelectUnidade } from "@/components/SelectUnidade";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Banner />
-      <Sobre />
-      <Escolhas />
-      <Localizacao />
-      <Contato />
-    </div>
+    <div className="w-full h-screen flex flex-col items-center justify-center gap-5">
+        <div>
+          <Image
+            src={"/assets/images/realmais.svg"}
+            width={400}
+            height={204}
+            alt="Logo RealMais"
+          />
+        </div>
+        <p className="text-center text-gray-700 text-base max-w-md">
+          Seja bem-vindo(a) à RealMais! Para continuar, selecione a unidade desejada no menu abaixo.
+        </p>
+        <SelectUnidade/>
+      </div>
   );
 }

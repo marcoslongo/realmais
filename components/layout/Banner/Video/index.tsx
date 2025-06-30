@@ -1,7 +1,7 @@
 export function Video() {
   return (
     <video
-      className="hidden md:flex absolute top-0 opacity-80 z-10"
+      className="hidden md:flex absolute top-0 opacity-80 z-20"
       width="100%"
       height="240"
       loop

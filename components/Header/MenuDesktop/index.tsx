@@ -1,7 +1,11 @@
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 
-export function MenuDesktop() {
+interface MenuDesktopProps {
+  whatsapp: string;
+}
+
+export function MenuDesktop({ whatsapp }: MenuDesktopProps) {
   return (
     <nav className="hidden md:flex items-center gap-6">
       <ul className="flex gap-5">
@@ -11,7 +15,7 @@ export function MenuDesktop() {
       </ul>
       <Link
         className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md"
-        href={'https://wa.me/+5522998399111'}
+        href={`https://wa.me/${whatsapp}`}
         target="_blank"
       >
         <FaWhatsapp size={28} />

@@ -6,7 +6,12 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { BsLightningFill } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
 
-export function Sobre() {
+interface SobreProps {
+  texto: string,
+  whatsapp: string
+}
+
+export function Sobre({ texto, whatsapp }: SobreProps) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const textFromRight = {
@@ -49,16 +54,11 @@ export function Sobre() {
             Sobre Nós
             <span className="logo-color-orange"><BsLightningFill /></span>
           </h2>
-          <p className="text-lg">
-            Nossa missão é não apenas fornecer baterias de alta qualidade, mas também garantir que nossos clientes tenham sempre o suporte necessário para manter seus veículos em pleno funcionamento...
-          </p>
-          <p className="text-lg font-semibold">
-            Entre em contato conosco e descubra como podemos ajudar a manter seu veículo sempre em movimento!
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: texto }} />
           <div className="flex mt-2">
             <Link
               className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md"
-              href={'https://wa.me/+5522998399111'}
+              href={`https://wa.me/${whatsapp}`}
               target="_blank"
             >
               <FaWhatsapp size={28} />

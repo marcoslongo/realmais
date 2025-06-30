@@ -3,7 +3,12 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export function Localizacao() {
+interface LocalizacaoProps{
+  endereco: string;
+  localMap: string;
+}
+
+export function Localizacao({endereco, localMap}:LocalizacaoProps) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
@@ -37,7 +42,7 @@ export function Localizacao() {
             <h2 className="text-base">Onde Estamos?</h2>
             <h3 className="text-5xl font-bold">Endereço</h3>
             <p className="text-lg">
-              Av. Teixeira e Souza, 473 - Vila Nova - Cabo Frio - Rio de Janeiro
+              {endereco}
             </p>
           </div>
         </motion.div>
@@ -48,7 +53,7 @@ export function Localizacao() {
           animate={controls}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.8499068011306!2d-42.022656!3d-22.8820023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9704cb6baeedd1%3A0xcb7eb509f4f6441f!2sAv.%20Teixeira%20e%20Souza%2C%20473%20-%20Centro%2C%20Cabo%20Frio%20-%20RJ%2C%2028907-410!5e0!3m2!1spt-BR!2sbr!4v1727381227721!5m2!1spt-BR!2sbr"
+            src={localMap}
             width="100%"
             height="300"
             style={{ border: 0 }}
