@@ -5,7 +5,7 @@ import { Contato } from "@/components/layout/Contato/Index";
 import { Escolhas } from "@/components/layout/Escolhas";
 import { Localizacao } from "@/components/layout/Localizacao";
 import { Sobre } from "@/components/layout/Sobre";
-import siteData from "@/data/cabofrio";
+import siteData from "@/data/curitiba";
 
 export default function Home() {
   return (

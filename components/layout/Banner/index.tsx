@@ -1,5 +1,5 @@
-'use client'
-import { useEffect, useState } from "react";
+'use client';
+
 import { motion } from "framer-motion";
 import { Video } from "./Video";
 import { HighlightSection } from "./Highlight";
@@ -8,33 +8,15 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { Slider } from "./Slider";
 
 interface BannerProps {
-  titulo: string,
-  subtitulo: string,
-  texto: string,
-  informativo: string
+  titulo: string;
+  subtitulo: string;
+  texto: string;
+  informativo: string;
 }
 
 export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
-  const [yearsInMarket, setYearsInMarket] = useState(45);
-
-  useEffect(() => {
-    const updateYears = () => {
-      const currentDate = new Date();
-      const currentYear = currentDate.getFullYear();
-
-      if (currentDate.getMonth() === 1) {
-        setYearsInMarket(currentYear - 1978);
-      }
-    };
-
-    updateYears();
-
-    const intervalId = setInterval(() => {
-      updateYears();
-    }, 1000 * 60 * 60 * 24);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  const currentYear = new Date().getFullYear();
+  const yearsInMarket = currentYear - 1978;
 
   const textFromLeft = {
     initial: { opacity: 0, x: -100 },
@@ -64,7 +46,12 @@ export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
             <div>
               <div className="md:text-lg text-white text-center md:text-start flex flex-col gap-1">
                 <div dangerouslySetInnerHTML={{ __html: texto }} />
-                <span className="font-bold text-lg md:text-2xl logo-color-orange">{informativo}</span>
+                <span className="font-bold text-lg md:text-2xl logo-color-orange">
+                  {informativo}
+                </span>
+                <span className="text-white text-base md:text-lg">
+                  {yearsInMarket} anos de mercado
+                </span>
               </div>
             </div>
             <motion.div className="flex justify-center md:justify-start" whileHover={{ scale: 1.05 }}>
