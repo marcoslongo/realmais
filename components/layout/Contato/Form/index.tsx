@@ -107,7 +107,7 @@ export function Form() {
 
       <Button
         type="submit"
-        className="bg-[#ff6600] hover:bg-[#000056] uppercase font-semibold text-lg"
+        className="bg-[#ff6600] border-2 border-transparent hover:bg-[#000056] hover:border-[#ff6600] uppercase font-semibold text-lg"
       >
         Enviar
       </Button>
