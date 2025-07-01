@@ -1,3 +1,6 @@
+const currentYear = new Date().getFullYear();
+const yearsInMarket = currentYear - 1980;
+
 const siteData = {
   Header: {
     telefone: "(46) 99975-3345",
@@ -7,7 +10,7 @@ const siteData = {
   Banner: {
     titulo: "Bem-vindo à <span>Rede Baterias RealMais</span>",
     subtitulo: "Seu Especialista em Baterias Automotivas em Francisco Beltrão!",
-    texto: "<p>Oferecemos as melhores soluções em baterias automotivas para você.</p> <p>Marca com 45 anos de mercado, que oferece linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>",
+    texto: `<p>Oferecemos as melhores soluções em baterias automotivas para você.</p> <p>Marca com ${yearsInMarket} anos de mercado, que oferece linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>`,
     informativo: "Baterias direto da fábrica",
   },
   Sobre: {
