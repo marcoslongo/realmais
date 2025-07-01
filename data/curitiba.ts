@@ -15,7 +15,13 @@ const siteData = {
   },
   Sobre: {
     texto: "<p class='text-lg'>Nossa missão é não apenas fornecer baterias de alta qualidade, mas também garantir que nossos clientes tenham sempre o suporte necessário para manter seus veículos em pleno funcionamento...</p><br /><p class='text-lg font-semibold'>Entre em contato conosco e descubra como podemos ajudar a manter seu veículo sempre em movimento!</p>",
-    whatsapp: "+554133665490"
+    whatsapp: "+554133665490",
+    images: [
+      "/assets/images/curitiba/01.webp",
+      "/assets/images/curitiba/03.webp",
+      "/assets/images/curitiba/04.webp",
+      "/assets/images/curitiba/05.webp"
+    ]
   },
   Localizacao: {
     endereco: "Avenida Prefeito Maurício Fruet, 3246 - Cajuru - Curitiba - PR - 82920-330 - Brasil",
