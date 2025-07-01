@@ -1,3 +1,6 @@
+const currentYear = new Date().getFullYear();
+const yearsInMarket = currentYear - 1980;
+
 const siteData = {
   Header: {
     telefone: "(41) 3366-5490",
@@ -7,8 +10,8 @@ const siteData = {
   Banner: {
     titulo: "Bem-vindo à <span>Rede Baterias RealMais</span>",
     subtitulo: "Seu Especialista em Baterias Automotivas em Curitiba!",
-    texto: "<p>Oferecemos as melhores soluções em baterias automotivas para você.</p> <p>Marca com 45 anos de mercado, que oferece linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>",
-    informativo: "Baterias direto da fábrica",
+    texto: `<p>Oferecemos as melhores soluções em baterias automotivas para você.</p> <p>Marca com ${yearsInMarket} anos de mercado, que oferece linha completa de baterias para veículos leves e pesados, garantindo a energia que você precisa para qualquer jornada.</p>`,
+    informativo: "Baterias direto da fábrica"
   },
   Sobre: {
     texto: "<p class='text-lg'>Nossa missão é não apenas fornecer baterias de alta qualidade, mas também garantir que nossos clientes tenham sempre o suporte necessário para manter seus veículos em pleno funcionamento...</p><br /><p class='text-lg font-semibold'>Entre em contato conosco e descubra como podemos ajudar a manter seu veículo sempre em movimento!</p>",

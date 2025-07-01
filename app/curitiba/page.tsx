@@ -20,6 +20,7 @@ export default function Home() {
         subtitulo={siteData.Banner.subtitulo}
         texto={siteData.Banner.texto}
         informativo={siteData.Banner.informativo}
+        whatsapp={siteData.Header.whatsapp}
       />
       <Sobre
         texto={siteData.Sobre.texto}

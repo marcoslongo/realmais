@@ -12,11 +12,10 @@ interface BannerProps {
   subtitulo: string;
   texto: string;
   informativo: string;
+  whatsapp: string;
 }
 
-export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
-  const currentYear = new Date().getFullYear();
-  const yearsInMarket = currentYear - 1978;
+export function Banner({ titulo, subtitulo, texto, informativo, whatsapp }: BannerProps) {
 
   const textFromLeft = {
     initial: { opacity: 0, x: -100 },
@@ -49,15 +48,12 @@ export function Banner({ titulo, subtitulo, texto, informativo }: BannerProps) {
                 <span className="font-bold text-lg md:text-2xl logo-color-orange">
                   {informativo}
                 </span>
-                <span className="text-white text-base md:text-lg">
-                  {yearsInMarket} anos de mercado
-                </span>
               </div>
             </div>
             <motion.div className="flex justify-center md:justify-start" whileHover={{ scale: 1.05 }}>
               <Link
                 className="bg-[#05CE38] rounded-full flex gap-2 text-white py-3 px-6 items-center justify-center font-bold text-lg hover:scale-105 transition shadow hover:shadow-md"
-                href={'https://wa.me/+5522998399111'}
+                href={`https://wa.me/${whatsapp}`}
                 target="_blank"
               >
                 <FaWhatsapp size={28} />

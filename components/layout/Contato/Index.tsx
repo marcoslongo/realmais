@@ -1,5 +1,4 @@
 'use client'
-import { Video } from "../Banner/Video";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Form } from "./Form";
@@ -53,8 +52,7 @@ export function Contato() {
           <Form />
         </div>
       </motion.div>
-
-      <Video />
+      <div className="absolute w-full h-full top-0 z-10 block bg-[#000056]" />
     </section>
   );
 }
