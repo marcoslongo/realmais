@@ -1,17 +1,25 @@
 'use client'
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import { BsLightningFill } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import styles from './carousel.module.css';
 
 interface SobreProps {
-  texto: string,
-  whatsapp: string
+  texto: string;
+  whatsapp: string;
+  images?: string[];
 }
 
-export function Sobre({ texto, whatsapp }: SobreProps) {
+export function Sobre({ texto, whatsapp, images }: SobreProps) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const textFromRight = {
@@ -28,19 +36,36 @@ export function Sobre({ texto, whatsapp }: SobreProps) {
     <section id="sobre" className="scroll-mt-64">
       <div ref={ref} className="container grid grid-cols-1 md:grid-cols-2 items-center my-20 gap-8">
         <motion.div
-          className="relative h-full shadow-lg"
+          className="relative h-full"
           variants={imageFromLeft}
           initial="initial"
           animate={inView ? "animate" : "initial"}
           transition={{ duration: 0.8 }}
         >
-          <Image
-            src={'/assets/images/temp.webp'}
-            alt=""
-            objectFit="cover"
-            fill
-            className="rounded-lg"
-          />
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={1}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            speed={1000}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay, EffectFade]}
+            className="relative w-full h-[280px] md:h-[400px] rounded-2xl"
+          >
+            {(images && images.length > 0 ? images : ['/assets/images/temp.webp']).map((image, index) => (
+              <SwiperSlide key={index} className={styles.slide}>
+                <Image
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </motion.div>
 
         <motion.div

@@ -25,6 +25,7 @@ export default function Home() {
       <Sobre
         texto={siteData.Sobre.texto}
         whatsapp={siteData.Sobre.whatsapp}
+        images={siteData.Sobre.images}
       />
       <Escolhas />
       <Localizacao

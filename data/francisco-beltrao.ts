@@ -15,7 +15,13 @@ const siteData = {
   },
   Sobre: {
     texto: "<p class='text-lg'>Nossa missão é não apenas fornecer baterias de alta qualidade, mas também garantir que nossos clientes tenham sempre o suporte necessário para manter seus veículos em pleno funcionamento...</p><br /><p class='text-lg font-semibold'>Entre em contato conosco e descubra como podemos ajudar a manter seu veículo sempre em movimento!</p>",
-    whatsapp: "+5546999753345"
+    whatsapp: "+5546999753345",
+    images: [
+      "/assets/images/curitiba/01.webp",
+      "/assets/images/curitiba/03.webp",
+      "/assets/images/curitiba/04.webp",
+      "/assets/images/curitiba/05.webp"
+    ]
   },
   Localizacao: {
     endereco: "Av. Antonio Silvio Barbieri, 1774 - Aeroporto - Francisco Beltrão - PR - 85603-000 - Brasil",
