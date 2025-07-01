@@ -19,7 +19,7 @@ export function SelectUnidade() {
 
   return (
     <Select onValueChange={handleSelectChange}>
-      <SelectTrigger className="w-[250px]">
+      <SelectTrigger className="w-full">
         <SelectValue placeholder="Selecione uma unidade" />
       </SelectTrigger>
       <SelectContent>
